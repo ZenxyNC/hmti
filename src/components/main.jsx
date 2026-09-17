@@ -25,9 +25,9 @@ export default function Main() {
   const isModalOpen = location.hash === "#showcase-program-kerja";
 
   const DataProker = [
-    { image: "/noodle-party.jpg", title: "Noodle Party", date: "Agustus 2026", description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Autem repellendus eaque dolorem accusantium labore, rerum impedit perspiciatis natus est minima tempore, deleniti illo, maxime iusto tempora voluptas adipisci debitis quas." },
-    { image: "/diesnatalis.jpg", title: "Dies Natalis TI", date: "Agustus 2026", description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Autem repellendus eaque dolorem accusantium labore, rerum impedit perspiciatis natus est minima tempore, deleniti illo, maxime iusto tempora voluptas adipisci debitis quas." },
-    { image: "/techxplore.jpg", title: "TechXplore", date: "September 2026", description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Autem repellendus eaque dolorem accusantium labore, rerum impedit perspiciatis natus est minima tempore, deleniti illo, maxime iusto tempora voluptas adipisci debitis quas." },
+    { image: `${import.meta.env.BASE_URL}noodle-party.jpg`, title: "Noodle Party", date: "Agustus 2026", description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Autem repellendus eaque dolorem accusantium labore, rerum impedit perspiciatis natus est minima tempore, deleniti illo, maxime iusto tempora voluptas adipisci debitis quas." },
+    { image: `${import.meta.env.BASE_URL}diesnatalis.jpg`, title: "Dies Natalis TI", date: "Agustus 2026", description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Autem repellendus eaque dolorem accusantium labore, rerum impedit perspiciatis natus est minima tempore, deleniti illo, maxime iusto tempora voluptas adipisci debitis quas." },
+    { image: `${import.meta.env.BASE_URL}techxplore.jpg`, title: "TechXplore", date: "September 2026", description: "Lorem ipsum dolor sit amet consectetur adipiscing elit. Autem repellendus eaque dolorem accusantium labore, rerum impedit perspiciatis natus est minima tempore, deleniti illo, maxime iusto tempora voluptas adipisci debitis quas." },
   ];
 
   const [DataProkerIndex, setDataProkerIndex] = useState(0);
@@ -144,7 +144,7 @@ export default function Main() {
         ">
           <div className="w-full h-full flex justify-between items-center">
             <div className="w-max h-full py-1 flex gap-1 items-center">
-              <img src="/hmti-logo.png" className="h-full" />
+              <img src={`${import.meta.env.BASE_URL}hmti-logo.png`} className="h-full" />
               <span className="font-bold text-xl">HMTI SCU</span>
             </div>
             <button
@@ -168,7 +168,8 @@ export default function Main() {
 
         <div
           name="texture"
-          className="bg-[url('/texture.svg')] bg-repeat bg-cover bg-center w-dvw h-svh absolute"
+          className="bg-repeat bg-cover bg-center w-dvw h-svh absolute"
+          style={{ backgroundImage: `url(${import.meta.env.BASE_URL}texture.svg)` }}
         />
 
         <div
