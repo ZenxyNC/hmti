@@ -1,7 +1,7 @@
 {
   "name": "hmti",
   "private": true,
-  "version": "0.0.1",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "dev": "vite",
@@ -12,12 +12,17 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
+    "@supabase/supabase-js": "^2.119.2",
     "@tailwindcss/vite": "^4.3.3",
+    "motion": "^14.14.0",
+    "randomcolor": "^0.6.2",
     "react": "^19.2.8",
     "react-dom": "^19.2.8",
     "react-icons": "^5.7.0",
     "react-router-dom": "^7.18.3",
-    "tailwindcss": "^4.3.3"
+    "tailwindcss": "^4.3.3",
+    "unique-names-generator": "^4.7.1",
+    "uuid": "^14.0.3"
   },
   "devDependencies": {
     "@babel/core": "^7.29.7",

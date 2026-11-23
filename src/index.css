@@ -33,9 +33,18 @@
 
 /* Consistent focus ring for keyboard navigation */
 :focus-visible {
-  outline: 2px solid rgba(0, 122, 255, 0.7);
+  outline: 1px solid rgba(0, 122, 255, 0.7);
   outline-offset: 2px;
   border-radius: 4px;
+}
+/* focus:-outline-offset-1 focus:outline-1 focus:outline-accent focus:shadow-[0_0_6px_-1px_var(--color-accent)] */
+input:focus,
+textarea:focus {
+  outline: 1px solid var(--color-accent);
+  box-shadow: 0px 0px 6px 0px var(--color-accent);
+  outline-offset: -1px;
+  border-radius: var(--radius-inner);
+  border: none;
 }
 
 h1 { 
@@ -168,15 +177,20 @@ h2 {
 }
 
 @theme {
-  --color-primary: #070A12;
-  --color-secondary: #0B0D12;
+  --color-primary: #111111;
+  --color-secondary: #1D1D1F;
   --color-accent: #007AFF;
   --color-text-pri: #F5F5F5;
   --color-text-sec: rgba(245, 245, 245, 0.6);
   --color-border: rgba(245, 245, 245, 0.16);
+  --color-kesan-base: #B2DFDB;
+  --color-kesan-button: #16524D;
+  --color-pesan-base: #C5CAE9;
+  --color-pesan-button: #2A3369;
 
   --radius-outer: var(--radius-outer);
   --radius-inner: var(--radius-inner);
+  --radius-independent: 16px;
 }
 
 html {
@@ -185,5 +199,5 @@ html {
   font-family: 'Inter', sans-serif;
   overflow-x: hidden;
   scroll-behavior: smooth;
-  scrollbar-gutter: stable;
+  /* scrollbar-gutter: stable; */
 }
